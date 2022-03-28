@@ -9,7 +9,11 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
 	<flow name="mulesoft-jenkinsFlow" doc:id="76d9b45f-c0a2-423b-8f68-b5be17530da3" >
-		<http:listener doc:name="Listener" doc:id="84a97a93-6bbc-4983-bfa9-ef264ae5ae4e" config-ref="HTTP_Listener_config" path="/test"/>
+		<scheduler doc:name="Scheduler" doc:id="7086ebdc-98fc-4e92-9fc1-805b773b3fc3" >
+			<scheduling-strategy >
+				<fixed-frequency frequency="1" timeUnit="MINUTES"/>
+			</scheduling-strategy>
+		</scheduler>
 		<ee:transform doc:name="Transform Message" doc:id="6427e38a-5258-429d-aa12-100bd90c5ac1" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
