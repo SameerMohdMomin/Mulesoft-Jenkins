@@ -33,7 +33,7 @@
 				<configuration>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<username>sameersomaiya</username>
+						<username>sameersomaiyaa</username>
 						<password>Wondar@828640</password>
 						<workers>1</workers>
 						<workerType>Micro</workerType>
